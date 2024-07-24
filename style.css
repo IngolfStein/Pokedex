@@ -26,18 +26,56 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(101, 62, 231, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     width: 100%;
-    height: 80px;
     text-align: center;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 h1 {
     margin: 0;
     font-size: 2em;
+}
+
+#search-field {
+    padding: 5px;
+    font-size: 1em;
+}
+
+#search-button {
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
+#error-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#error-message.hidden {
+    display: none;
+}
+
+#error-message button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 #characters-container {
@@ -59,6 +97,7 @@ h1 {
     display: flex;
     flex-direction: column;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .character-card {
@@ -90,4 +129,20 @@ h1 {
     color: #666;
     font-size: 0.9em;
     margin: 0;
+}
+
+.return-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.return-button:hover {
+    background-color: #555;
 }
